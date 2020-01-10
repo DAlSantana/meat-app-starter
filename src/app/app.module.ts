@@ -3,20 +3,41 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import{ROUTES} from './app.routes'
 
-import { AppComponent } from './app.component'
-
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { RestaurantesComponent } from './restaurantes/restaurantes.component';
+import { RestauranteComponent } from './restaurantes/restaurante/restaurante.component';
+import { RestauranteServico } from './restaurantes/restaurante/restaurante.service'
+import { RestauranteDetailComponent } from './restaurante-detail/restaurante-detail.component';
+import { CarrinhoComprasComponent } from './restaurante-detail/carrinho-compras/carrinho-compras.component'
+import { MenuComponent } from './restaurante-detail/menu/menu.component'
+import { MenuItemComponent } from './restaurante-detail/menu-item/menu-item.component';
+import { ReviewsComponent } from './restaurante-detail/reviews/reviews.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    AboutComponent,
+    RestaurantesComponent,
+    RestauranteComponent,
+    RestauranteDetailComponent,
+    CarrinhoComprasComponent,
+    MenuComponent,
+    MenuItemComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule,
-    RouterModule
+    HttpModule, 
+    RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [RestauranteServico],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
