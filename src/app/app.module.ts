@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
@@ -17,6 +17,7 @@ import { CarrinhoComprasComponent } from './restaurante-detail/carrinho-compras/
 import { MenuComponent } from './restaurante-detail/menu/menu.component'
 import { MenuItemComponent } from './restaurante-detail/menu-item/menu-item.component';
 import { ReviewsComponent } from './restaurante-detail/reviews/reviews.component'
+import {CarrinhoCompraServico} from './restaurante-detail/carrinho-compras/carrinho-compra.service'
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { ReviewsComponent } from './restaurante-detail/reviews/reviews.component
     HttpModule, 
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [RestauranteServico],
+  providers: [RestauranteServico,CarrinhoCompraServico,{provide:LOCALE_ID,useValue:'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
