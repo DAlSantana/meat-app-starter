@@ -19,6 +19,7 @@ import { MenuItemComponent } from './restaurante-detail/menu-item/menu-item.comp
 import { ReviewsComponent } from './restaurante-detail/reviews/reviews.component'
 import {CarrinhoCompraServico} from './restaurante-detail/carrinho-compras/carrinho-compra.service';
 import {OrderComponent} from './order/order.component'
+import {FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import {OrderComponent} from './order/order.component'
   imports: [
     BrowserModule,
     HttpModule, 
+    FormsModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [RestauranteServico,CarrinhoCompraServico,{provide:LOCALE_ID,useValue:'pt-BR'}],
