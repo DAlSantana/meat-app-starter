@@ -22,7 +22,6 @@ export class RestauranteServico{
     reviewsOfRestaurante(id:String): Observable<any>{
         return this.http.get(`${MEAT_API}/restaurants/${id}/reviews`).map(response =>response.json()).catch(ErrorHandler.handleError)
     }
-    
     menuOfRestaurante(id:String):Observable<MenuItem[]>{
         return this.http.get(`${MEAT_API}/restaurants/${id}/menu`).map(response => response.json()).catch(ErrorHandler.handleError)
     }

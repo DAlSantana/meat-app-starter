@@ -17,7 +17,8 @@ import { CarrinhoComprasComponent } from './restaurante-detail/carrinho-compras/
 import { MenuComponent } from './restaurante-detail/menu/menu.component'
 import { MenuItemComponent } from './restaurante-detail/menu-item/menu-item.component';
 import { ReviewsComponent } from './restaurante-detail/reviews/reviews.component'
-import {CarrinhoCompraServico} from './restaurante-detail/carrinho-compras/carrinho-compra.service'
+import {CarrinhoCompraServico} from './restaurante-detail/carrinho-compras/carrinho-compra.service';
+import {OrderComponent} from './order/order.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {CarrinhoCompraServico} from './restaurante-detail/carrinho-compras/carri
     CarrinhoComprasComponent,
     MenuComponent,
     MenuItemComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

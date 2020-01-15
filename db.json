@@ -258,6 +258,13 @@
       "restaurantId": "burger-house"
     },
     {
+      "name": "Diego",
+      "date": "2016-12-12T18:25:43",
+      "rating": 5,
+      "comments": "Melhor sanduíche da cidade, recomendo !",
+      "restaurantId": "burger-house"
+    },
+    {
       "name": "Eric",
       "date": "2017-01-23T18:25:43",
       "rating": 4.5,
